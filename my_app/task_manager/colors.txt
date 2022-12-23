@@ -1,0 +1,11 @@
+ 			
+#0B5FA5	
+#25547B	
+#043C6B	
+#3F8FD2	
+#66A1D2
+
+shrift1: #fff
+shrift2: #838ea2
+
+#0A67A3
