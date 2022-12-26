@@ -1,20 +1,34 @@
 import sys
-# from PyQt5 import QtWidgets, uic
-#
-# app = QtWidgets.QApplication(sys.argv)
-#
-# window = uic.loadUi("mainwindow.ui")
-# window.show()
-# app.exec()
+import os
+from PySide2 import *
 
-from PyQt5 import uic
-from PyQt5.QtWidgets import QApplication
 
-Form, Window = uic.loadUiType("mainwindow.ui")
+from mainwindow import *
 
-app = QApplication(sys.argv)
-window = Window()
-form = Form()
-form.setupUi(window)
-window.show()
-app.exec()
+from Custom_Widgets.Widgets import *
+
+## MAIN WINDOW CLASS
+########################################################################
+class MainWindow(QMainWindow):
+    def __init__(self):
+        QMainWindow.__init__(self)
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self)
+
+        ########################################################################
+        # APPLY JSON STYLESHEET
+        ########################################################################
+        # self = QMainWindow class
+        # self.ui = Ui_MainWindow / user interface class
+        loadJsonStyle(self, self.ui)
+
+        self.show()
+
+
+########################################################################
+## EXECUTE APP
+########################################################################
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    sys.exit(app.exec_())

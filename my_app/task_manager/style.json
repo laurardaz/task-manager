@@ -1,0 +1,24 @@
+{
+        "QMainWindow":[
+                {
+                        "frameless": true,
+                        "transluscentBg": true,
+                        "sizeGrip": "sizeGrip",
+                        "navigation":[
+                                {
+                                        "minimize":"minimizeBtn",
+                                        "close": "closeBtn",
+                                        "restore":[
+                                                {
+                                                        "buttonName": "restoreBtn",
+                                                        "normalIcon": "/home/laura/study/2022-2023 учебный год/диплом/task-manager/my_app/task_manager/icons/feather/square.svg",
+                                                        "maximizedIcon": "/home/laura/study/2022-2023 учебный год/диплом/task-manager/my_app/task_manager/icons/feather/copy.svg"
+                                                }
+                                        ],
+                                        "moveWindow": "headerContainer",
+                                        "tittleBar": "headerContainer"
+                                }
+                        ]
+                }
+        ]
+}
