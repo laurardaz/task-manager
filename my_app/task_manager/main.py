@@ -1,5 +1,5 @@
-import sys
 import os
+import sys
 from PySide2 import *
 
 
@@ -7,8 +7,7 @@ from mainwindow import *
 
 from Custom_Widgets.Widgets import *
 
-## MAIN WINDOW CLASS
-########################################################################
+
 class MainWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
@@ -24,10 +23,9 @@ class MainWindow(QMainWindow):
 
         self.show()
 
+        self.ui.profileBtn.clicked.connect(lambda: self.ui.profileContainer.expandMenu())
+        self.ui.closeProfileBtn.clicked.connect(lambda: self.ui.profileContainer.collapseMenu())
 
-########################################################################
-## EXECUTE APP
-########################################################################
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()

@@ -1,24 +1,72 @@
 {
-        "QMainWindow":[
+    "QMainWindow":[
+        {
+            "frameless": true,
+            "transluscentBg": true,
+            "sizeGrip": "sizeGrip",
+            "navigation":[
                 {
-                        "frameless": true,
-                        "transluscentBg": true,
-                        "sizeGrip": "sizeGrip",
-                        "navigation":[
-                                {
-                                        "minimize":"minimizeBtn",
-                                        "close": "closeBtn",
-                                        "restore":[
-                                                {
-                                                        "buttonName": "restoreBtn",
-                                                        "normalIcon": "/home/laura/study/2022-2023 учебный год/диплом/task-manager/my_app/task_manager/icons/feather/square.svg",
-                                                        "maximizedIcon": "/home/laura/study/2022-2023 учебный год/диплом/task-manager/my_app/task_manager/icons/feather/copy.svg"
-                                                }
-                                        ],
-                                        "moveWindow": "headerContainer",
-                                        "tittleBar": "headerContainer"
-                                }
-                        ]
+                    "minimize":"minimizeBtn",
+                    "close": "closeBtn",
+                    "restore":[
+                        {
+                            "buttonName": "restoreBtn",
+                            "normalIcon": "/home/laura/study/2022-2023 учебный год/диплом/task-manager/my_app/task_manager/icons/feather/square.svg",
+                            "maximizedIcon": "/home/laura/study/2022-2023 учебный год/диплом/task-manager/my_app/task_manager/icons/feather/copy.svg"
+                        }
+                    ],
+                    "moveWindow": "headerContainer",
+                    "tittleBar": "headerContainer"
                 }
-        ]
+            ]
+        }
+    ],
+    "QCustomSlideMenu": [
+        {
+            "name": "leftMenuContainer",
+            "defaultSize": [{
+                "width": 38,
+                "height": "parent"
+            }],
+            "collapsedSize": [{
+                "width": 38,
+                "height": "parent"
+            }],
+            "expandedSize": [{
+                "width": 140,
+                "height": "parent"
+            }],
+            "toggleButton": [{
+                "buttonName": "menuBtn",
+                "icons": [{
+                    "whenMenuIsCollapsed": "/home/laura/study/2022-2023 учебный год/диплом/task-manager/my_app/task_manager/icons/feather/menu.svg",
+                    "whenMenuIsExpanded": "/home/laura/study/2022-2023 учебный год/диплом/task-manager/my_app/task_manager/icons/feather/chevron-left.svg"
+                }]
+            }],
+            "menuTransitionAnimation": [{
+                "animationDuration": 500,
+                "animationEasingCurve": "Linear"
+            }]
+        },
+        {
+            "name": "profileContainer",
+            "defaultSize": [{
+                "width": 0,
+                "height": "auto"
+            }],
+            "collapsedSize": [{
+                "width": 0,
+                "height": "auto"
+            }],
+            "expandedSize": [{
+                "width": 230,
+                "height": "auto"
+            }],
+            "menuTransitionAnimation": [{
+                "animationDuration": 500,
+                "animationEasingCurve": "Linear"
+            }]
+        }
+    ]
 }
+

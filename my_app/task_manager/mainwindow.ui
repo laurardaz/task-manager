@@ -31,7 +31,7 @@
 }
 #leftMenuSubContainer QPushButton{
 	text-align: left;
-	padding: 8px 10px;
+	padding: 10px 10px;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 }
@@ -66,7 +66,19 @@
      <number>0</number>
     </property>
     <item alignment="Qt::AlignLeft">
-     <widget class="QWidget" name="leftMenuContainer" native="true">
+     <widget class="QCustomSlideMenu" name="leftMenuContainer" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>38</width>
+        <height>16777215</height>
+       </size>
+      </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <property name="spacing">
         <number>0</number>
@@ -86,11 +98,29 @@
        <property name="bottomMargin">
         <number>0</number>
        </property>
-       <item alignment="Qt::AlignHCenter">
+       <item>
         <widget class="QWidget" name="leftMenuSubContainer" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>140</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <property name="spacing">
-           <number>0</number>
+           <number>20</number>
           </property>
           <property name="leftMargin">
            <number>0</number>
@@ -470,7 +500,7 @@
               <number>0</number>
              </property>
              <item>
-              <widget class="QPushButton" name="pushButton_6">
+              <widget class="QPushButton" name="notificationBtn">
                <property name="toolTip">
                 <string>Notification</string>
                </property>
@@ -490,7 +520,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_4">
+              <widget class="QPushButton" name="profileBtn">
                <property name="toolTip">
                 <string>Profile</string>
                </property>
@@ -759,11 +789,17 @@
            </widget>
           </item>
           <item alignment="Qt::AlignRight">
-           <widget class="QWidget" name="profileContainer" native="true">
+           <widget class="QCustomSlideMenu" name="profileContainer" native="true">
             <property name="minimumSize">
              <size>
               <width>230</width>
               <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>230</width>
+              <height>454</height>
              </size>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -853,7 +889,7 @@
                     </widget>
                    </item>
                    <item alignment="Qt::AlignRight">
-                    <widget class="QPushButton" name="pushButton_7">
+                    <widget class="QPushButton" name="closeProfileBtn">
                      <property name="toolTip">
                       <string>Close User</string>
                      </property>
@@ -906,7 +942,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QWidget" name="popupNotificationContainer" native="true">
+        <widget class="QCustomSlideMenu" name="popupNotificationContainer" native="true">
          <layout class="QVBoxLayout" name="verticalLayout_15">
           <item>
            <widget class="QWidget" name="popupNotificationSubContainer" native="true">
@@ -1086,6 +1122,14 @@
    </attribute>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomSlideMenu</class>
+   <extends>QWidget</extends>
+   <header location="global">Custom_Widgets.Widgets.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
