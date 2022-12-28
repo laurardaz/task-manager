@@ -20,7 +20,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(948, 674)
+        MainWindow.resize(1050, 724)
         MainWindow.setStyleSheet(u"*{\n"
 "	border: none;\n"
 "	background-color: transparent;\n"
@@ -49,10 +49,11 @@ class Ui_MainWindow(object):
 "	background-color: #25547B;\n"
 "	border-radius: 10px;\n"
 "}\n"
-"#frame_7, #popupNotificationSubContainer{\n"
+"#frame_7, #popupAddNewContainer, #popupNotificationSubContainer{\n"
 "	background-color:#043C6B;\n"
 "	border-radius: 10px;\n"
 "}\n"
+"\n"
 "")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
@@ -63,7 +64,7 @@ class Ui_MainWindow(object):
         self.leftMenuContainer = QCustomSlideMenu(self.centralwidget)
         self.leftMenuContainer.setObjectName(u"leftMenuContainer")
         self.leftMenuContainer.setMinimumSize(QSize(0, 0))
-        self.leftMenuContainer.setMaximumSize(QSize(38, 16777215))
+        self.leftMenuContainer.setMaximumSize(QSize(16777215, 16777215))
         self.verticalLayout = QVBoxLayout(self.leftMenuContainer)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -99,6 +100,15 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_2.addWidget(self.menuBtn)
 
+        self.addBtn = QPushButton(self.frame)
+        self.addBtn.setObjectName(u"addBtn")
+        icon1 = QIcon()
+        icon1.addFile(u"icons/feather/plus.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.addBtn.setIcon(icon1)
+        self.addBtn.setIconSize(QSize(24, 24))
+
+        self.horizontalLayout_2.addWidget(self.addBtn, 0, Qt.AlignRight)
+
 
         self.verticalLayout_2.addWidget(self.frame, 0, Qt.AlignTop)
 
@@ -115,18 +125,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.setSpacing(0)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.verticalLayout_3.setContentsMargins(0, 10, 0, 10)
-        self.homeBtn = QPushButton(self.frame_3)
-        self.homeBtn.setObjectName(u"homeBtn")
-        self.homeBtn.setStyleSheet(u"background-color: #25547B;")
-        icon1 = QIcon()
-        icon1.addFile(u"icons/feather/home.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.homeBtn.setIcon(icon1)
-        self.homeBtn.setIconSize(QSize(24, 24))
-
-        self.verticalLayout_3.addWidget(self.homeBtn)
-
         self.projectsBtn = QPushButton(self.frame_3)
         self.projectsBtn.setObjectName(u"projectsBtn")
+        self.projectsBtn.setStyleSheet(u"background-color: #25547B;")
         icon2 = QIcon()
         icon2.addFile(u"icons/feather/layers.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.projectsBtn.setIcon(icon2)
@@ -315,33 +316,19 @@ class Ui_MainWindow(object):
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
         self.mainPages = QCustomStackedWidget(self.mainContentsContainer)
         self.mainPages.setObjectName(u"mainPages")
-        self.pageMainMenu = QWidget()
-        self.pageMainMenu.setObjectName(u"pageMainMenu")
-        self.verticalLayout_10 = QVBoxLayout(self.pageMainMenu)
-        self.verticalLayout_10.setObjectName(u"verticalLayout_10")
-        self.label_3 = QLabel(self.pageMainMenu)
-        self.label_3.setObjectName(u"label_3")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
-        sizePolicy3.setHorizontalStretch(0)
-        sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.label_3.sizePolicy().hasHeightForWidth())
-        self.label_3.setSizePolicy(sizePolicy3)
-        font = QFont()
-        font.setPointSize(13)
-        self.label_3.setFont(font)
-        self.label_3.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_10.addWidget(self.label_3)
-
-        self.mainPages.addWidget(self.pageMainMenu)
         self.pageProjects = QWidget()
         self.pageProjects.setObjectName(u"pageProjects")
         self.verticalLayout_14 = QVBoxLayout(self.pageProjects)
         self.verticalLayout_14.setObjectName(u"verticalLayout_14")
         self.label_5 = QLabel(self.pageProjects)
         self.label_5.setObjectName(u"label_5")
+        sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(0)
         sizePolicy3.setHeightForWidth(self.label_5.sizePolicy().hasHeightForWidth())
         self.label_5.setSizePolicy(sizePolicy3)
+        font = QFont()
+        font.setPointSize(13)
         self.label_5.setFont(font)
         self.label_5.setAlignment(Qt.AlignCenter)
 
@@ -390,6 +377,30 @@ class Ui_MainWindow(object):
         self.verticalLayout_11.addWidget(self.label_7)
 
         self.mainPages.addWidget(self.pageCalendar)
+        self.pageCreateNewProject = QWidget()
+        self.pageCreateNewProject.setObjectName(u"pageCreateNewProject")
+        self.verticalLayout_10 = QVBoxLayout(self.pageCreateNewProject)
+        self.verticalLayout_10.setObjectName(u"verticalLayout_10")
+        self.label_3 = QLabel(self.pageCreateNewProject)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setFont(font)
+        self.label_3.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_10.addWidget(self.label_3)
+
+        self.mainPages.addWidget(self.pageCreateNewProject)
+        self.pageCreateNewTask = QWidget()
+        self.pageCreateNewTask.setObjectName(u"pageCreateNewTask")
+        self.verticalLayout_17 = QVBoxLayout(self.pageCreateNewTask)
+        self.verticalLayout_17.setObjectName(u"verticalLayout_17")
+        self.label_12 = QLabel(self.pageCreateNewTask)
+        self.label_12.setObjectName(u"label_12")
+        self.label_12.setFont(font)
+        self.label_12.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_17.addWidget(self.label_12)
+
+        self.mainPages.addWidget(self.pageCreateNewTask)
 
         self.verticalLayout_9.addWidget(self.mainPages)
 
@@ -469,6 +480,8 @@ class Ui_MainWindow(object):
 
         self.popupNotificationContainer = QCustomSlideMenu(self.mainBodyContainer)
         self.popupNotificationContainer.setObjectName(u"popupNotificationContainer")
+        self.popupNotificationContainer.setMinimumSize(QSize(0, 0))
+        self.popupNotificationContainer.setMaximumSize(QSize(670, 16777215))
         self.verticalLayout_15 = QVBoxLayout(self.popupNotificationContainer)
         self.verticalLayout_15.setObjectName(u"verticalLayout_15")
         self.popupNotificationSubContainer = QWidget(self.popupNotificationContainer)
@@ -525,6 +538,43 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_5.addWidget(self.popupNotificationContainer)
 
+        self.popupAddNewContainer = QCustomSlideMenu(self.mainBodyContainer)
+        self.popupAddNewContainer.setObjectName(u"popupAddNewContainer")
+        self.popupAddNewContainer.setMinimumSize(QSize(50, 50))
+        self.popupAddNewContainer.setMaximumSize(QSize(400, 16777215))
+        self.verticalLayout_18 = QVBoxLayout(self.popupAddNewContainer)
+        self.verticalLayout_18.setObjectName(u"verticalLayout_18")
+        self.frame_13 = QFrame(self.popupAddNewContainer)
+        self.frame_13.setObjectName(u"frame_13")
+        self.frame_13.setFrameShape(QFrame.StyledPanel)
+        self.frame_13.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_15 = QHBoxLayout(self.frame_13)
+        self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
+        self.AddProjectBtn = QPushButton(self.frame_13)
+        self.AddProjectBtn.setObjectName(u"AddProjectBtn")
+        self.AddProjectBtn.setIcon(icon2)
+        self.AddProjectBtn.setIconSize(QSize(24, 24))
+
+        self.horizontalLayout_15.addWidget(self.AddProjectBtn)
+
+        self.AddTaskBtn = QPushButton(self.frame_13)
+        self.AddTaskBtn.setObjectName(u"AddTaskBtn")
+        sizePolicy7 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
+        sizePolicy7.setHorizontalStretch(0)
+        sizePolicy7.setVerticalStretch(0)
+        sizePolicy7.setHeightForWidth(self.AddTaskBtn.sizePolicy().hasHeightForWidth())
+        self.AddTaskBtn.setSizePolicy(sizePolicy7)
+        self.AddTaskBtn.setIcon(icon3)
+        self.AddTaskBtn.setIconSize(QSize(24, 24))
+
+        self.horizontalLayout_15.addWidget(self.AddTaskBtn)
+
+
+        self.verticalLayout_18.addWidget(self.frame_13)
+
+
+        self.verticalLayout_5.addWidget(self.popupAddNewContainer)
+
         self.footerContainer = QWidget(self.mainBodyContainer)
         self.footerContainer.setObjectName(u"footerContainer")
         self.horizontalLayout_11 = QHBoxLayout(self.footerContainer)
@@ -565,7 +615,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
         self.menuBar = QMenuBar(MainWindow)
         self.menuBar.setObjectName(u"menuBar")
-        self.menuBar.setGeometry(QRect(0, 0, 948, 30))
+        self.menuBar.setGeometry(QRect(0, 0, 1050, 30))
         MainWindow.setMenuBar(self.menuBar)
         self.toolBar = QToolBar(MainWindow)
         self.toolBar.setObjectName(u"toolBar")
@@ -573,7 +623,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.mainPages.setCurrentIndex(4)
+        self.mainPages.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -585,10 +635,7 @@ class Ui_MainWindow(object):
         self.menuBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Menu", None))
 #endif // QT_CONFIG(tooltip)
         self.menuBtn.setText("")
-#if QT_CONFIG(tooltip)
-        self.homeBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Home", None))
-#endif // QT_CONFIG(tooltip)
-        self.homeBtn.setText(QCoreApplication.translate("MainWindow", u"\u0413\u043b\u0430\u0432\u043d\u043e\u0435 \u043c\u0435\u043d\u044e", None))
+        self.addBtn.setText("")
 #if QT_CONFIG(tooltip)
         self.projectsBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Projects", None))
 #endif // QT_CONFIG(tooltip)
@@ -633,11 +680,12 @@ class Ui_MainWindow(object):
         self.closeBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close Window", None))
 #endif // QT_CONFIG(tooltip)
         self.closeBtn.setText("")
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"\u0413\u043b\u0430\u0432\u043d\u043e\u0435 \u043c\u0435\u043d\u044e", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0440\u043e\u0435\u043a\u0442\u044b", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"\u0417\u0430\u0434\u0430\u0447\u0438", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"\u041a\u0430\u043b\u0435\u043d\u0434\u0430\u0440\u044c", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"\u0421\u043e\u0437\u0434\u0430\u043d\u0438\u0435 \u043f\u0440\u043e\u0435\u043a\u0442\u0430", None))
+        self.label_12.setText(QCoreApplication.translate("MainWindow", u"\u0421\u043e\u0437\u0434\u0430\u043d\u0438\u0435 \u0437\u0430\u0434\u0430\u0447\u0438", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c", None))
 #if QT_CONFIG(tooltip)
         self.closeProfileBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close User", None))
@@ -653,6 +701,14 @@ class Ui_MainWindow(object):
         self.closeNotificationBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close Notification", None))
 #endif // QT_CONFIG(tooltip)
         self.closeNotificationBtn.setText("")
+#if QT_CONFIG(tooltip)
+        self.frame_13.setToolTip(QCoreApplication.translate("MainWindow", u"add project", None))
+#endif // QT_CONFIG(tooltip)
+        self.AddProjectBtn.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0440\u043e\u0435\u043a\u0442", None))
+#if QT_CONFIG(tooltip)
+        self.AddTaskBtn.setToolTip(QCoreApplication.translate("MainWindow", u"add task", None))
+#endif // QT_CONFIG(tooltip)
+        self.AddTaskBtn.setText(QCoreApplication.translate("MainWindow", u"\u0417\u0430\u0434\u0430\u0447\u0430", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Copyright", None))
         self.label_11.setText("")
         self.toolBar.setWindowTitle(QCoreApplication.translate("MainWindow", u"toolBar", None))

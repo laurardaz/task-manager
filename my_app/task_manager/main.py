@@ -28,6 +28,9 @@ class MainWindow(QMainWindow):
 
         self.ui.closeNotificationBtn.clicked.connect(lambda: self.ui.popupNotificationContainer.collapseMenu())
 
+        self.ui.AddProjectBtn.clicked.connect(lambda: self.ui.popupAddNewContainer.collapseMenu())
+        self.ui.AddTaskBtn.clicked.connect(lambda: self.ui.popupAddNewContainer.collapseMenu())
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()

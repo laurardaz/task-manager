@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>948</width>
-    <height>674</height>
+    <width>1050</width>
+    <height>724</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -42,10 +42,11 @@
 	background-color: #25547B;
 	border-radius: 10px;
 }
-#frame_7, #popupNotificationSubContainer{
+#frame_7, #popupAddNewContainer, #popupNotificationSubContainer{
 	background-color:#043C6B;
 	border-radius: 10px;
 }
+
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -75,7 +76,7 @@
       </property>
       <property name="maximumSize">
        <size>
-        <width>38</width>
+        <width>16777215</width>
         <height>16777215</height>
        </size>
       </property>
@@ -178,6 +179,23 @@
                </property>
               </widget>
              </item>
+             <item alignment="Qt::AlignRight">
+              <widget class="QPushButton" name="addBtn">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>icons/feather/plus.svg</normaloff>icons/feather/plus.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>24</width>
+                 <height>24</height>
+                </size>
+               </property>
+              </widget>
+             </item>
             </layout>
            </widget>
           </item>
@@ -212,32 +230,12 @@
               <number>10</number>
              </property>
              <item>
-              <widget class="QPushButton" name="homeBtn">
-               <property name="toolTip">
-                <string>Home</string>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">background-color: #25547B;</string>
-               </property>
-               <property name="text">
-                <string>Главное меню</string>
-               </property>
-               <property name="icon">
-                <iconset>
-                 <normaloff>icons/feather/home.svg</normaloff>icons/feather/home.svg</iconset>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>24</width>
-                 <height>24</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-             <item>
               <widget class="QPushButton" name="projectsBtn">
                <property name="toolTip">
                 <string>Projects</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: #25547B;</string>
                </property>
                <property name="text">
                 <string>Проекты</string>
@@ -656,33 +654,8 @@
              <item>
               <widget class="QCustomStackedWidget" name="mainPages">
                <property name="currentIndex">
-                <number>4</number>
+                <number>0</number>
                </property>
-               <widget class="QWidget" name="pageMainMenu">
-                <layout class="QVBoxLayout" name="verticalLayout_10">
-                 <item>
-                  <widget class="QLabel" name="label_3">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <pointsize>13</pointsize>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Главное меню</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
                <widget class="QWidget" name="pageProjects">
                 <layout class="QVBoxLayout" name="verticalLayout_14">
                  <item>
@@ -775,6 +748,44 @@
                    </property>
                    <property name="text">
                     <string>Календарь</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="pageCreateNewProject">
+                <layout class="QVBoxLayout" name="verticalLayout_10">
+                 <item>
+                  <widget class="QLabel" name="label_3">
+                   <property name="font">
+                    <font>
+                     <pointsize>13</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Создание проекта</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="pageCreateNewTask">
+                <layout class="QVBoxLayout" name="verticalLayout_17">
+                 <item>
+                  <widget class="QLabel" name="label_12">
+                   <property name="font">
+                    <font>
+                     <pointsize>13</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Создание задачи</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -943,6 +954,18 @@
        </item>
        <item>
         <widget class="QCustomSlideMenu" name="popupNotificationContainer" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>670</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <layout class="QVBoxLayout" name="verticalLayout_15">
           <item>
            <widget class="QWidget" name="popupNotificationSubContainer" native="true">
@@ -1030,6 +1053,82 @@
         </widget>
        </item>
        <item>
+        <widget class="QCustomSlideMenu" name="popupAddNewContainer" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>400</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_18">
+          <item>
+           <widget class="QFrame" name="frame_13">
+            <property name="toolTip">
+             <string>add project</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_15">
+             <item>
+              <widget class="QPushButton" name="AddProjectBtn">
+               <property name="text">
+                <string>Проект</string>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>icons/feather/layers.svg</normaloff>icons/feather/layers.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>24</width>
+                 <height>24</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="AddTaskBtn">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>add task</string>
+               </property>
+               <property name="text">
+                <string>Задача</string>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>icons/feather/file-text.svg</normaloff>icons/feather/file-text.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>24</width>
+                 <height>24</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
         <widget class="QWidget" name="footerContainer" native="true">
          <layout class="QHBoxLayout" name="horizontalLayout_11">
           <item>
@@ -1105,7 +1204,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>948</width>
+     <width>1050</width>
      <height>30</height>
     </rect>
    </property>

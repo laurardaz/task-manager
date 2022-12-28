@@ -102,6 +102,42 @@
             "toggleButton": [{
                 "buttonName": "notificationBtn"
             }]
+        },
+        {
+            "name": "popupAddNewContainer",
+            "defaultSize": [{
+                "width": 0,
+                "height": "auto"
+            }],
+            "collapsedSize": [{
+                "width": 0,
+                "height": "auto"
+            }],
+            "expandedSize": [{
+                "width": 400,
+                "height": 100
+            }],
+            "menuTransitionAnimation": [{
+                "animationDuration": 500,
+                "animationEasingCurve": "Linear"
+            }],
+            "floatPosition": [
+                {
+                    "relativeTo": "centralwidget",
+                    "position": "bottom-center",
+                    "shadow":[
+                        {
+                            "color": "#000",
+                            "blurRadius": 20,
+                            "xOffset": 0,
+                            "yOffset": 0
+                        }
+                    ]
+                }
+            ],
+            "toggleButton": [{
+                "buttonName": "addBtn"
+            }]
         }
     ],
     "QStackedWidget":[
@@ -111,11 +147,12 @@
                 {
                     "navigationButtons":[
                         {
-                            "homeBtn": "pageMainMenu",
                             "projectsBtn": "pageProjects",
                             "tasksBtn": "pageTasks",
                             "statisticsBtn": "pageStatistics",
-                            "calendarBtn": "pageCalendar"
+                            "calendarBtn": "pageCalendar",
+                            "AddProjectBtn": "pageCreateNewProject",
+                            "AddTaskBtn": "pageCreateNewTask"
                         }
                     ]
                 }
@@ -125,11 +162,12 @@
     "QPushButtonGroup": [
         {
             "Buttons": [
-                "homeBtn",
                 "projectsBtn",
                 "tasksBtn",
                 "statisticsBtn",
-                "calendarBtn"
+                "calendarBtn",
+                "AddProjectBtn",
+                "AddTaskBtn"
             ],
             "Style":[
                 {
