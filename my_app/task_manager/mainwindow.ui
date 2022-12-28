@@ -509,7 +509,7 @@
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>icons/feather/feather.svg</normaloff>icons/feather/feather.svg</iconset>
+                 <normaloff>icons/feather/bell.svg</normaloff>icons/feather/bell.svg</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -639,8 +639,8 @@
          </property>
          <property name="minimumSize">
           <size>
-           <width>0</width>
-           <height>0</height>
+           <width>910</width>
+           <height>466</height>
           </size>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_7">

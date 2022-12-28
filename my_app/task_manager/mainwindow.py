@@ -242,7 +242,7 @@ class Ui_MainWindow(object):
         self.notificationBtn = QPushButton(self.frame_5)
         self.notificationBtn.setObjectName(u"notificationBtn")
         icon8 = QIcon()
-        icon8.addFile(u"icons/feather/feather.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon8.addFile(u"icons/feather/bell.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.notificationBtn.setIcon(icon8)
         self.notificationBtn.setIconSize(QSize(24, 24))
 
@@ -304,7 +304,7 @@ class Ui_MainWindow(object):
         self.mainBodyContent.setObjectName(u"mainBodyContent")
         sizePolicy1.setHeightForWidth(self.mainBodyContent.sizePolicy().hasHeightForWidth())
         self.mainBodyContent.setSizePolicy(sizePolicy1)
-        self.mainBodyContent.setMinimumSize(QSize(0, 0))
+        self.mainBodyContent.setMinimumSize(QSize(910, 466))
         self.horizontalLayout_7 = QHBoxLayout(self.mainBodyContent)
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
         self.mainContentsContainer = QWidget(self.mainBodyContent)

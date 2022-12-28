@@ -39,8 +39,8 @@
             "toggleButton": [{
                 "buttonName": "menuBtn",
                 "icons": [{
-                    "whenMenuIsCollapsed": "/home/laura/study/2022-2023 учебный год/диплом/task-manager/my_app/task_manager/icons/feather/menu.svg",
-                    "whenMenuIsExpanded": "/home/laura/study/2022-2023 учебный год/диплом/task-manager/my_app/task_manager/icons/feather/chevron-left.svg"
+                    "whenMenuIsCollapsed": "icons/feather/menu.svg",
+                    "whenMenuIsExpanded": "icons/feather/chevron-left.svg"
                 }]
             }],
             "menuTransitionAnimation": [{
@@ -65,6 +65,42 @@
             "menuTransitionAnimation": [{
                 "animationDuration": 500,
                 "animationEasingCurve": "Linear"
+            }]
+        },
+        {
+            "name": "popupNotificationContainer",
+            "defaultSize": [{
+                "width": 0,
+                "height": "auto"
+            }],
+            "collapsedSize": [{
+                "width": 0,
+                "height": "auto"
+            }],
+            "expandedSize": [{
+                "width": 900,
+                "height": "auto"
+            }],
+            "menuTransitionAnimation": [{
+                "animationDuration": 500,
+                "animationEasingCurve": "Linear"
+            }],
+            "floatPosition": [
+                {
+                    "relativeTo": "centralwidget",
+                    "position": "bottom-center",
+                    "shadow":[
+                        {
+                            "color": "#000",
+                            "blurRadius": 20,
+                            "xOffset": 0,
+                            "yOffset": 0
+                        }
+                    ]
+                }
+            ],
+            "toggleButton": [{
+                "buttonName": "notificationBtn"
             }]
         }
     ]
