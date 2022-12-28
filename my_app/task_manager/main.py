@@ -26,6 +26,8 @@ class MainWindow(QMainWindow):
         self.ui.profileBtn.clicked.connect(lambda: self.ui.profileContainer.expandMenu())
         self.ui.closeProfileBtn.clicked.connect(lambda: self.ui.profileContainer.collapseMenu())
 
+        self.ui.closeNotificationBtn.clicked.connect(lambda: self.ui.popupNotificationContainer.collapseMenu())
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()

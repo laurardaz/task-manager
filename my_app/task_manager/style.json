@@ -79,7 +79,7 @@
             }],
             "expandedSize": [{
                 "width": 900,
-                "height": "auto"
+                "height": 100
             }],
             "menuTransitionAnimation": [{
                 "animationDuration": 500,
@@ -88,7 +88,7 @@
             "floatPosition": [
                 {
                     "relativeTo": "centralwidget",
-                    "position": "bottom-center",
+                    "position": "center-center",
                     "shadow":[
                         {
                             "color": "#000",
@@ -102,6 +102,41 @@
             "toggleButton": [{
                 "buttonName": "notificationBtn"
             }]
+        }
+    ],
+    "QStackedWidget":[
+        {
+            "name":"mainPages",
+            "navigation":[
+                {
+                    "navigationButtons":[
+                        {
+                            "homeBtn": "pageMainMenu",
+                            "projectsBtn": "pageProjects",
+                            "tasksBtn": "pageTasks",
+                            "statisticsBtn": "pageStatistics",
+                            "calendarBtn": "pageCalendar"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "QPushButtonGroup": [
+        {
+            "Buttons": [
+                "homeBtn",
+                "projectsBtn",
+                "tasksBtn",
+                "statisticsBtn",
+                "calendarBtn"
+            ],
+            "Style":[
+                {
+                    "Active": "background-color: #25547B;",
+                    "NotActive": ""
+                }
+            ]
         }
     ]
 }

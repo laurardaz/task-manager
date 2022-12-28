@@ -654,11 +654,11 @@
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_9">
              <item>
-              <widget class="QStackedWidget" name="stackedWidget">
+              <widget class="QCustomStackedWidget" name="mainPages">
                <property name="currentIndex">
                 <number>4</number>
                </property>
-               <widget class="QWidget" name="page">
+               <widget class="QWidget" name="pageMainMenu">
                 <layout class="QVBoxLayout" name="verticalLayout_10">
                  <item>
                   <widget class="QLabel" name="label_3">
@@ -683,7 +683,7 @@
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="page_5">
+               <widget class="QWidget" name="pageProjects">
                 <layout class="QVBoxLayout" name="verticalLayout_14">
                  <item>
                   <widget class="QLabel" name="label_5">
@@ -708,7 +708,7 @@
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="page_3">
+               <widget class="QWidget" name="pageTasks">
                 <layout class="QVBoxLayout" name="verticalLayout_13">
                  <item>
                   <widget class="QLabel" name="label_6">
@@ -733,7 +733,7 @@
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="page_2">
+               <widget class="QWidget" name="pageStatistics">
                 <layout class="QVBoxLayout" name="verticalLayout_12">
                  <item>
                   <widget class="QLabel" name="label_4">
@@ -758,7 +758,7 @@
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="page_4">
+               <widget class="QWidget" name="pageCalendar">
                 <layout class="QVBoxLayout" name="verticalLayout_11">
                  <item>
                   <widget class="QLabel" name="label_7">
@@ -989,7 +989,7 @@
                  </widget>
                 </item>
                 <item alignment="Qt::AlignRight">
-                 <widget class="QPushButton" name="pushButton_8">
+                 <widget class="QPushButton" name="closeNotificationBtn">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -1126,6 +1126,12 @@
   <customwidget>
    <class>QCustomSlideMenu</class>
    <extends>QWidget</extends>
+   <header location="global">Custom_Widgets.Widgets.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QCustomStackedWidget</class>
+   <extends>QStackedWidget</extends>
    <header location="global">Custom_Widgets.Widgets.h</header>
    <container>1</container>
   </customwidget>

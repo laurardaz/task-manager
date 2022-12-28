@@ -13,6 +13,7 @@ from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 from Custom_Widgets.Widgets import QCustomSlideMenu
+from Custom_Widgets.Widgets import QCustomStackedWidget
 
 
 class Ui_MainWindow(object):
@@ -312,13 +313,13 @@ class Ui_MainWindow(object):
         self.mainContentsContainer.setMinimumSize(QSize(0, 0))
         self.verticalLayout_9 = QVBoxLayout(self.mainContentsContainer)
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
-        self.stackedWidget = QStackedWidget(self.mainContentsContainer)
-        self.stackedWidget.setObjectName(u"stackedWidget")
-        self.page = QWidget()
-        self.page.setObjectName(u"page")
-        self.verticalLayout_10 = QVBoxLayout(self.page)
+        self.mainPages = QCustomStackedWidget(self.mainContentsContainer)
+        self.mainPages.setObjectName(u"mainPages")
+        self.pageMainMenu = QWidget()
+        self.pageMainMenu.setObjectName(u"pageMainMenu")
+        self.verticalLayout_10 = QVBoxLayout(self.pageMainMenu)
         self.verticalLayout_10.setObjectName(u"verticalLayout_10")
-        self.label_3 = QLabel(self.page)
+        self.label_3 = QLabel(self.pageMainMenu)
         self.label_3.setObjectName(u"label_3")
         sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy3.setHorizontalStretch(0)
@@ -332,12 +333,12 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_10.addWidget(self.label_3)
 
-        self.stackedWidget.addWidget(self.page)
-        self.page_5 = QWidget()
-        self.page_5.setObjectName(u"page_5")
-        self.verticalLayout_14 = QVBoxLayout(self.page_5)
+        self.mainPages.addWidget(self.pageMainMenu)
+        self.pageProjects = QWidget()
+        self.pageProjects.setObjectName(u"pageProjects")
+        self.verticalLayout_14 = QVBoxLayout(self.pageProjects)
         self.verticalLayout_14.setObjectName(u"verticalLayout_14")
-        self.label_5 = QLabel(self.page_5)
+        self.label_5 = QLabel(self.pageProjects)
         self.label_5.setObjectName(u"label_5")
         sizePolicy3.setHeightForWidth(self.label_5.sizePolicy().hasHeightForWidth())
         self.label_5.setSizePolicy(sizePolicy3)
@@ -346,12 +347,12 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_14.addWidget(self.label_5)
 
-        self.stackedWidget.addWidget(self.page_5)
-        self.page_3 = QWidget()
-        self.page_3.setObjectName(u"page_3")
-        self.verticalLayout_13 = QVBoxLayout(self.page_3)
+        self.mainPages.addWidget(self.pageProjects)
+        self.pageTasks = QWidget()
+        self.pageTasks.setObjectName(u"pageTasks")
+        self.verticalLayout_13 = QVBoxLayout(self.pageTasks)
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
-        self.label_6 = QLabel(self.page_3)
+        self.label_6 = QLabel(self.pageTasks)
         self.label_6.setObjectName(u"label_6")
         sizePolicy3.setHeightForWidth(self.label_6.sizePolicy().hasHeightForWidth())
         self.label_6.setSizePolicy(sizePolicy3)
@@ -360,12 +361,12 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_13.addWidget(self.label_6)
 
-        self.stackedWidget.addWidget(self.page_3)
-        self.page_2 = QWidget()
-        self.page_2.setObjectName(u"page_2")
-        self.verticalLayout_12 = QVBoxLayout(self.page_2)
+        self.mainPages.addWidget(self.pageTasks)
+        self.pageStatistics = QWidget()
+        self.pageStatistics.setObjectName(u"pageStatistics")
+        self.verticalLayout_12 = QVBoxLayout(self.pageStatistics)
         self.verticalLayout_12.setObjectName(u"verticalLayout_12")
-        self.label_4 = QLabel(self.page_2)
+        self.label_4 = QLabel(self.pageStatistics)
         self.label_4.setObjectName(u"label_4")
         sizePolicy3.setHeightForWidth(self.label_4.sizePolicy().hasHeightForWidth())
         self.label_4.setSizePolicy(sizePolicy3)
@@ -374,12 +375,12 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_12.addWidget(self.label_4)
 
-        self.stackedWidget.addWidget(self.page_2)
-        self.page_4 = QWidget()
-        self.page_4.setObjectName(u"page_4")
-        self.verticalLayout_11 = QVBoxLayout(self.page_4)
+        self.mainPages.addWidget(self.pageStatistics)
+        self.pageCalendar = QWidget()
+        self.pageCalendar.setObjectName(u"pageCalendar")
+        self.verticalLayout_11 = QVBoxLayout(self.pageCalendar)
         self.verticalLayout_11.setObjectName(u"verticalLayout_11")
-        self.label_7 = QLabel(self.page_4)
+        self.label_7 = QLabel(self.pageCalendar)
         self.label_7.setObjectName(u"label_7")
         sizePolicy3.setHeightForWidth(self.label_7.sizePolicy().hasHeightForWidth())
         self.label_7.setSizePolicy(sizePolicy3)
@@ -388,9 +389,9 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_11.addWidget(self.label_7)
 
-        self.stackedWidget.addWidget(self.page_4)
+        self.mainPages.addWidget(self.pageCalendar)
 
-        self.verticalLayout_9.addWidget(self.stackedWidget)
+        self.verticalLayout_9.addWidget(self.mainPages)
 
 
         self.horizontalLayout_7.addWidget(self.mainContentsContainer)
@@ -500,20 +501,20 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_9.addWidget(self.label_8)
 
-        self.pushButton_8 = QPushButton(self.frame_8)
-        self.pushButton_8.setObjectName(u"pushButton_8")
+        self.closeNotificationBtn = QPushButton(self.frame_8)
+        self.closeNotificationBtn.setObjectName(u"closeNotificationBtn")
         sizePolicy6 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
         sizePolicy6.setHorizontalStretch(0)
         sizePolicy6.setVerticalStretch(0)
-        sizePolicy6.setHeightForWidth(self.pushButton_8.sizePolicy().hasHeightForWidth())
-        self.pushButton_8.setSizePolicy(sizePolicy6)
-        self.pushButton_8.setMinimumSize(QSize(0, 0))
+        sizePolicy6.setHeightForWidth(self.closeNotificationBtn.sizePolicy().hasHeightForWidth())
+        self.closeNotificationBtn.setSizePolicy(sizePolicy6)
+        self.closeNotificationBtn.setMinimumSize(QSize(0, 0))
         icon14 = QIcon()
         icon14.addFile(u"icons/feather/x-octagon.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_8.setIcon(icon14)
-        self.pushButton_8.setIconSize(QSize(24, 24))
+        self.closeNotificationBtn.setIcon(icon14)
+        self.closeNotificationBtn.setIconSize(QSize(24, 24))
 
-        self.horizontalLayout_9.addWidget(self.pushButton_8, 0, Qt.AlignRight)
+        self.horizontalLayout_9.addWidget(self.closeNotificationBtn, 0, Qt.AlignRight)
 
 
         self.verticalLayout_16.addWidget(self.frame_8)
@@ -572,7 +573,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(4)
+        self.mainPages.setCurrentIndex(4)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -649,9 +650,9 @@ class Ui_MainWindow(object):
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Notification", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Notification Message", None))
 #if QT_CONFIG(tooltip)
-        self.pushButton_8.setToolTip(QCoreApplication.translate("MainWindow", u"Close Notification", None))
+        self.closeNotificationBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close Notification", None))
 #endif // QT_CONFIG(tooltip)
-        self.pushButton_8.setText("")
+        self.closeNotificationBtn.setText("")
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Copyright", None))
         self.label_11.setText("")
         self.toolBar.setWindowTitle(QCoreApplication.translate("MainWindow", u"toolBar", None))
