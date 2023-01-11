@@ -11,8 +11,8 @@
                     "restore":[
                         {
                             "buttonName": "restoreBtn",
-                            "normalIcon": "/home/laura/study/2022-2023 учебный год/диплом/task-manager/my_app/task_manager/icons/feather/square.svg",
-                            "maximizedIcon": "/home/laura/study/2022-2023 учебный год/диплом/task-manager/my_app/task_manager/icons/feather/copy.svg"
+                            "normalIcon": "icons/feather/square.svg",
+                            "maximizedIcon": "icons/feather/copy.svg"
                         }
                     ],
                     "moveWindow": "headerContainer",
@@ -124,7 +124,7 @@
             "floatPosition": [
                 {
                     "relativeTo": "centralwidget",
-                    "position": "bottom-center",
+                    "position": "top-center",
                     "shadow":[
                         {
                             "color": "#000",

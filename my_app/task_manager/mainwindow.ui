@@ -15,41 +15,44 @@
   </property>
   <property name="styleSheet">
    <string notr="true">*{
-	border: none;
-	background-color: transparent;
-	background: transparent;
-	padding: 0;
-	margin: 0;
-	color:#fff;
+        border: none;
+        background-color: transparent;
+        background: transparent;
+        padding: 0;
+        margin: 0;
+        color:#fff;
 }
 
 #centralwidget{
-	background-color: #3F8FD2;
+        background-color: #3F8FD2;
 }
 #leftMenuSubContainer{
-	background-color: #043C6B;
+        background-color: #043C6B;
 }
 #leftMenuSubContainer QPushButton{
-	text-align: left;
-	padding: 10px 10px;
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
+        text-align: left;
+        padding: 10px 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
 }
 #headerContainer, #footerContainer{
-	background-color: #25547B;
+        background-color: #25547B;
 }
 #profileSubContainer{
-	background-color: #25547B;
-	border-radius: 10px;
+        background-color: #25547B;
+        border-radius: 10px;
 }
-#frame_7, #popupAddNewContainer, #popupNotificationSubContainer{
-	background-color:#043C6B;
-	border-radius: 10px;
+#frame_7, #popupNotificationSubContainer, #popupAddNewContainer{
+        background-color:#043C6B;
+        border-radius: 10px;
 }
 
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <property name="spacing">
      <number>0</number>
@@ -357,13 +360,6 @@
                <property name="toolTip">
                 <string>Settings</string>
                </property>
-               <property name="text">
-                <string>Настройки</string>
-               </property>
-               <property name="icon">
-                <iconset>
-                 <normaloff>icons/feather/settings.svg</normaloff>icons/feather/settings.svg</iconset>
-               </property>
                <property name="iconSize">
                 <size>
                  <width>24</width>
@@ -654,7 +650,7 @@
              <item>
               <widget class="QCustomStackedWidget" name="mainPages">
                <property name="currentIndex">
-                <number>0</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="pageProjects">
                 <layout class="QVBoxLayout" name="verticalLayout_14">
@@ -810,7 +806,7 @@
             <property name="maximumSize">
              <size>
               <width>230</width>
-              <height>454</height>
+              <height>440</height>
              </size>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -831,27 +827,39 @@
              </property>
              <item alignment="Qt::AlignRight">
               <widget class="QWidget" name="profileSubContainer" native="true">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Ignored">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
                <property name="minimumSize">
                 <size>
                  <width>230</width>
-                 <height>0</height>
+                 <height>454</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>450</height>
                 </size>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_7">
                 <property name="spacing">
-                 <number>5</number>
+                 <number>0</number>
                 </property>
                 <property name="leftMargin">
-                 <number>5</number>
+                 <number>0</number>
                 </property>
                 <property name="topMargin">
-                 <number>5</number>
+                 <number>0</number>
                 </property>
                 <property name="rightMargin">
-                 <number>5</number>
+                 <number>0</number>
                 </property>
                 <property name="bottomMargin">
-                 <number>5</number>
+                 <number>0</number>
                 </property>
                 <item>
                  <widget class="QFrame" name="frame_7">
@@ -923,24 +931,44 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QWidget" name="widget" native="true">
-                  <layout class="QVBoxLayout" name="verticalLayout_8">
-                   <item>
-                    <widget class="QLabel" name="label_2">
-                     <property name="font">
-                      <font>
-                       <pointsize>13</pointsize>
-                      </font>
-                     </property>
-                     <property name="text">
-                      <string>User</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
+                 <widget class="QStackedWidget" name="stackedWidget">
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="currentIndex">
+                   <number>1</number>
+                  </property>
+                  <widget class="QWidget" name="page">
+                   <layout class="QVBoxLayout" name="verticalLayout_8">
+                    <item>
+                     <widget class="QLabel" name="label_2">
+                      <property name="text">
+                       <string>Профиль</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                  <widget class="QWidget" name="page_2">
+                   <layout class="QVBoxLayout" name="verticalLayout_19">
+                    <item>
+                     <widget class="QLabel" name="label_13">
+                      <property name="text">
+                       <string>Авторизация</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
                  </widget>
                 </item>
                </layout>
@@ -962,7 +990,7 @@
          </property>
          <property name="maximumSize">
           <size>
-           <width>670</width>
+           <width>900</width>
            <height>16777215</height>
           </size>
          </property>
@@ -1147,11 +1175,7 @@
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_10">
              <item>
-              <widget class="QLabel" name="label_10">
-               <property name="text">
-                <string>Copyright</string>
-               </property>
-              </widget>
+              <widget class="QLabel" name="label_10"/>
              </item>
             </layout>
            </widget>
