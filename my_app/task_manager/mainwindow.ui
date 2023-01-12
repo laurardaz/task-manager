@@ -38,7 +38,7 @@
 #headerContainer, #footerContainer{
         background-color: #25547B;
 }
-#profileSubContainer{
+#profileSubContainer, #tasksTableWidget{
         background-color: #25547B;
         border-radius: 10px;
 }
@@ -680,24 +680,148 @@
                <widget class="QWidget" name="pageTasks">
                 <layout class="QVBoxLayout" name="verticalLayout_13">
                  <item>
-                  <widget class="QLabel" name="label_6">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <pointsize>13</pointsize>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Задачи</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
+                  <widget class="QWidget" name="widget" native="true">
+                   <layout class="QVBoxLayout" name="verticalLayout_17">
+                    <item>
+                     <widget class="QLabel" name="label_6">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>13</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Задачи</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QTableWidget" name="tasksTableWidget">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777212</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <column>
+                       <property name="text">
+                        <string>Название</string>
+                       </property>
+                       <property name="background">
+                        <color>
+                         <red>4</red>
+                         <green>60</green>
+                         <blue>107</blue>
+                        </color>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Описание</string>
+                       </property>
+                       <property name="background">
+                        <color>
+                         <red>4</red>
+                         <green>60</green>
+                         <blue>107</blue>
+                        </color>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Проект</string>
+                       </property>
+                       <property name="background">
+                        <color>
+                         <red>4</red>
+                         <green>60</green>
+                         <blue>107</blue>
+                        </color>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Приоритет</string>
+                       </property>
+                       <property name="background">
+                        <color>
+                         <red>4</red>
+                         <green>60</green>
+                         <blue>107</blue>
+                        </color>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Начало</string>
+                       </property>
+                       <property name="background">
+                        <color>
+                         <red>4</red>
+                         <green>60</green>
+                         <blue>107</blue>
+                        </color>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Окончание</string>
+                       </property>
+                       <property name="background">
+                        <color>
+                         <red>4</red>
+                         <green>60</green>
+                         <blue>107</blue>
+                        </color>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Статус</string>
+                       </property>
+                       <property name="background">
+                        <color>
+                         <red>4</red>
+                         <green>60</green>
+                         <blue>107</blue>
+                        </color>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Действие</string>
+                       </property>
+                       <property name="background">
+                        <color>
+                         <red>4</red>
+                         <green>60</green>
+                         <blue>107</blue>
+                        </color>
+                       </property>
+                      </column>
+                     </widget>
+                    </item>
+                   </layout>
                   </widget>
                  </item>
                 </layout>
@@ -772,23 +896,30 @@
                 </layout>
                </widget>
                <widget class="QWidget" name="pageCreateNewTask">
-                <layout class="QVBoxLayout" name="verticalLayout_17">
-                 <item>
-                  <widget class="QLabel" name="label_12">
-                   <property name="font">
-                    <font>
-                     <pointsize>13</pointsize>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Создание задачи</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <widget class="QLabel" name="label_12">
+                 <property name="geometry">
+                  <rect>
+                   <x>50</x>
+                   <y>10</y>
+                   <width>144</width>
+                   <height>24</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>13</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Создание задачи</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
                </widget>
               </widget>
              </item>

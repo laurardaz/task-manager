@@ -45,7 +45,7 @@ class Ui_MainWindow(object):
 "#headerContainer, #footerContainer{\n"
 "        background-color: #25547B;\n"
 "}\n"
-"#profileSubContainer{\n"
+"#profileSubContainer, #tasksTableWidget{\n"
 "        background-color: #25547B;\n"
 "        border-radius: 10px;\n"
 "}\n"
@@ -337,14 +337,56 @@ class Ui_MainWindow(object):
         self.pageTasks.setObjectName(u"pageTasks")
         self.verticalLayout_13 = QVBoxLayout(self.pageTasks)
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
-        self.label_6 = QLabel(self.pageTasks)
+        self.widget = QWidget(self.pageTasks)
+        self.widget.setObjectName(u"widget")
+        self.verticalLayout_17 = QVBoxLayout(self.widget)
+        self.verticalLayout_17.setObjectName(u"verticalLayout_17")
+        self.label_6 = QLabel(self.widget)
         self.label_6.setObjectName(u"label_6")
         sizePolicy3.setHeightForWidth(self.label_6.sizePolicy().hasHeightForWidth())
         self.label_6.setSizePolicy(sizePolicy3)
         self.label_6.setFont(font)
         self.label_6.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_13.addWidget(self.label_6)
+        self.verticalLayout_17.addWidget(self.label_6)
+
+        self.tasksTableWidget = QTableWidget(self.widget)
+        if (self.tasksTableWidget.columnCount() < 8):
+            self.tasksTableWidget.setColumnCount(8)
+        __qtablewidgetitem = QTableWidgetItem()
+        __qtablewidgetitem.setBackground(QColor(4, 60, 107));
+        self.tasksTableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        __qtablewidgetitem1.setBackground(QColor(4, 60, 107));
+        self.tasksTableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        __qtablewidgetitem2.setBackground(QColor(4, 60, 107));
+        self.tasksTableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        __qtablewidgetitem3.setBackground(QColor(4, 60, 107));
+        self.tasksTableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        __qtablewidgetitem4 = QTableWidgetItem()
+        __qtablewidgetitem4.setBackground(QColor(4, 60, 107));
+        self.tasksTableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem4)
+        __qtablewidgetitem5 = QTableWidgetItem()
+        __qtablewidgetitem5.setBackground(QColor(4, 60, 107));
+        self.tasksTableWidget.setHorizontalHeaderItem(5, __qtablewidgetitem5)
+        __qtablewidgetitem6 = QTableWidgetItem()
+        __qtablewidgetitem6.setBackground(QColor(4, 60, 107));
+        self.tasksTableWidget.setHorizontalHeaderItem(6, __qtablewidgetitem6)
+        __qtablewidgetitem7 = QTableWidgetItem()
+        __qtablewidgetitem7.setBackground(QColor(4, 60, 107));
+        self.tasksTableWidget.setHorizontalHeaderItem(7, __qtablewidgetitem7)
+        self.tasksTableWidget.setObjectName(u"tasksTableWidget")
+        sizePolicy2.setHeightForWidth(self.tasksTableWidget.sizePolicy().hasHeightForWidth())
+        self.tasksTableWidget.setSizePolicy(sizePolicy2)
+        self.tasksTableWidget.setMinimumSize(QSize(0, 0))
+        self.tasksTableWidget.setMaximumSize(QSize(16777212, 16777215))
+
+        self.verticalLayout_17.addWidget(self.tasksTableWidget)
+
+
+        self.verticalLayout_13.addWidget(self.widget)
 
         self.mainPages.addWidget(self.pageTasks)
         self.pageStatistics = QWidget()
@@ -389,15 +431,12 @@ class Ui_MainWindow(object):
         self.mainPages.addWidget(self.pageCreateNewProject)
         self.pageCreateNewTask = QWidget()
         self.pageCreateNewTask.setObjectName(u"pageCreateNewTask")
-        self.verticalLayout_17 = QVBoxLayout(self.pageCreateNewTask)
-        self.verticalLayout_17.setObjectName(u"verticalLayout_17")
+        self.pageCreateNewTask.setStyleSheet(u"")
         self.label_12 = QLabel(self.pageCreateNewTask)
         self.label_12.setObjectName(u"label_12")
+        self.label_12.setGeometry(QRect(50, 10, 144, 24))
         self.label_12.setFont(font)
         self.label_12.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_17.addWidget(self.label_12)
-
         self.mainPages.addWidget(self.pageCreateNewTask)
 
         self.verticalLayout_9.addWidget(self.mainPages)
@@ -700,6 +739,22 @@ class Ui_MainWindow(object):
         self.closeBtn.setText("")
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0440\u043e\u0435\u043a\u0442\u044b", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"\u0417\u0430\u0434\u0430\u0447\u0438", None))
+        ___qtablewidgetitem = self.tasksTableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435", None));
+        ___qtablewidgetitem1 = self.tasksTableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435", None));
+        ___qtablewidgetitem2 = self.tasksTableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0440\u043e\u0435\u043a\u0442", None));
+        ___qtablewidgetitem3 = self.tasksTableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0440\u0438\u043e\u0440\u0438\u0442\u0435\u0442", None));
+        ___qtablewidgetitem4 = self.tasksTableWidget.horizontalHeaderItem(4)
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0430\u0447\u0430\u043b\u043e", None));
+        ___qtablewidgetitem5 = self.tasksTableWidget.horizontalHeaderItem(5)
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"\u041e\u043a\u043e\u043d\u0447\u0430\u043d\u0438\u0435", None));
+        ___qtablewidgetitem6 = self.tasksTableWidget.horizontalHeaderItem(6)
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0442\u0430\u0442\u0443\u0441", None));
+        ___qtablewidgetitem7 = self.tasksTableWidget.horizontalHeaderItem(7)
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"\u0414\u0435\u0439\u0441\u0442\u0432\u0438\u0435", None));
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"\u041a\u0430\u043b\u0435\u043d\u0434\u0430\u0440\u044c", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"\u0421\u043e\u0437\u0434\u0430\u043d\u0438\u0435 \u043f\u0440\u043e\u0435\u043a\u0442\u0430", None))
